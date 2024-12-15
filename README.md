@@ -34,7 +34,7 @@ Go to your GitHub account:
 Navigate to Settings > SSH and GPG keys > New SSH key.
 Paste the key into the "Key" field and give it a descriptive title, something like "S3DF".
 Click Add SSH key.
-###5. Test the SSH Connection
+### 5. Test the SSH Connection
 Run:
 ```bash
 ssh -T git@github.com
