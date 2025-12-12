@@ -11,9 +11,9 @@ ls -al ~/.ssh
 ```bash
 ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
 ```
-- Replace "your_email@example.com" with your GitHub email.
+- Replace "your_email@example.com" with the email associated with your GitHub account.
 - Press Enter to save the key in the default location (```~/.ssh/id_rsa```).
-- Optionally, set a passphrase for added security though you will have to enter this passcode every time you git push, so I elected not to. You can just press enter if you do not want to set a passcode at this time.
+- Optionally, set a passphrase for added security.
 ### 3. Add the SSH Key to the SSH Agent
 Start the SSH agent:
 ```bash
