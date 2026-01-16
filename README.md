@@ -1,6 +1,6 @@
 Working with git heavily streamlines code distribution, version tracking, and branching for different beamtimes. However, connecting this (or any) GitHub repository into your S3DF directory is not as straightforward as setting up github on your local computer. Below are the steps to do this.
 ## Connecting a Git Repository to GitHub via SSH on the S3DF Cluster
-To make push/pull requests from Github, there is a little extra legwork, but we only have to do this once and it (should) never have to be done again. Since we are on the S3DF cluster, we cannot use HTTP requests to pull/push changes from the remote repository. We have to use SSH.
+To make push/pull requests from Github, there is a little extra legwork, but we only have to do this once and it (should) never have to be done again. Since we are on the S3DF cluster, we cannot use HTTP requests to pull/push changes from the remote repository. We have to use SSH. Note: All UNIX commands should be run on S3DF, not your local computer.
 ### 1. Check for Existing SSH Keys
 ```bash
 ls -al ~/.ssh
