@@ -5,14 +5,14 @@ To make push/pull requests from Github, there is a little extra legwork, but we 
 ```bash
 ls -al ~/.ssh
 ```
-- Look for files named id_rsa and id_rsa.pub or similar. These are your SSH private and public keys.
+- Look for files named id_ed25519 and id_ed25519.pub or similar (you can use rsa, but it is outdated). These are your SSH private and public keys.
 - If no keys are present, proceed to the next step to generate one.
 ### 2. Generate a New SSH Key (if needed)
 ```bash
-ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+ssh-keygen -t ed25519 -C "your_email@example.com"
 ```
 - Replace "your_email@example.com" with the email associated with your GitHub account.
-- Press Enter to save the key in the default location (```~/.ssh/id_rsa```).
+- Press Enter to save the key in the default location (```~/.ssh/id_ed25519```).
 - Optionally, set a passphrase for added security.
 ### 3. Add the SSH Key to the SSH Agent
 Start the SSH agent:
@@ -21,12 +21,12 @@ eval "$(ssh-agent -s)"
 ```
 Add your private key to the agent:
 ```bash
-ssh-add ~/.ssh/id_rsa
+ssh-add ~/.ssh/id_ed25519
 ```
 ### 4. Add the SSH Key to Your GitHub Account
 Copy your public SSH key to the clipboard:
 ```bash
-cat ~/.ssh/id_rsa.pub
+cat ~/.ssh/id_ed25519.pub
 ```
 Highlight and copy the full output.
 Go to your GitHub account:
